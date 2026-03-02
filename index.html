@@ -12,7 +12,42 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+        .nav-wrapper .brand-logo {
+            font-size: 1.5rem !important;
+        }
 
+        @media (max-width: 600px) {
+            .nav-wrapper .brand-logo {
+                font-size: 1.2rem !important;
+                left: 10px !important;
+                transform: none !important;
+            }
+            .nav-wrapper .right {
+                margin-right: 0 !important;
+            }
+            .nav-wrapper .clear-btn {
+                padding: 0 10px !important;
+                font-size: 0.8rem !important;
+            }
+            .card-content .row .input-field {
+                margin-bottom: 0px !important;
+            }
+            .btn {
+                width: 100% !important;
+                margin-bottom: 10px !important;
+                display: block !important;
+            }
+        }
+        
+        /* Spacing for buttons in desktop */
+        @media (min-width: 601px) {
+            .btn {
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,13 +56,13 @@
     <nav>
         <div class="nav-wrapper cyan darken-4">
             <div class="container">
-                <a href="#" class="brand-logo center">
+                <a href="#" class="brand-logo left">
                     Money Tracker
                 </a>
                 <ul class="right">
                     <li>
                         <a href="#" class="clear-btn btn teal darken-1">
-                            clear all
+                            Clear All
                         </a>
                     </li>
                 </ul>
@@ -45,10 +80,10 @@
 
                 <form>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12 m6">
                             <input type="text" placeholder="Add item" id="item-name" >
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s12 m6">
                             <input type="text" placeholder="Add Money" id="item-money">
                         </div>
                     </div>
